@@ -96,6 +96,8 @@ async Task CopyFolderContentsRecursive(IFolder source, IModifiableFolder destina
             await CopyFolderContentsRecursive(source: subFolder, destination: newModifiableFolder);
         }
     }
+    
+    Logger.LogInformation($"Finished recursive copy of {source.Id} to {destination.Id}.");
 }
 
 bool GetFlagCommandLineArg(string name) => Environment.GetCommandLineArgs().FirstOrDefault(x => x.Contains($"--{name}")) is not null;
