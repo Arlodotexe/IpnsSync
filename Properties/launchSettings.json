@@ -1,0 +1,8 @@
+{
+  "profiles": {
+    "IpnsSync": {
+      "commandName": "Project",
+      "commandLineArgs": ""
+    }
+  }
+}
