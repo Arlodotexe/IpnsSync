@@ -61,6 +61,7 @@ async Task RunAsync()
     var sourceFolder = new IpfsFolder(cid.Split("/ipfs/", StringSplitOptions.RemoveEmptyEntries)[0], ipfsClient);
 
     await CopyFolderContentsRecursive(sourceFolder, destinationFolder);
+    Logger.LogInformation($"Finished run");
 }
 
 await RunAsync();
@@ -77,7 +78,7 @@ async Task CopyFolderContentsRecursive(IFolder source, IModifiableFolder destina
     {
         if (item is IFile file)
         {
-            Logger.LogInformation($"Copying file {file.Name} (id: {file.Id}) to {destination.Id}.");
+            Logger.LogInformation($"Copying file {file.Id} {file.Name} to {destination.Id}.");
             await destination.CreateCopyOfAsync(file);
         }
 
