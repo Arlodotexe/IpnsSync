@@ -8,8 +8,8 @@ A quick script thrown together in about an hour. Requires Kubo to be running.
 ### Clone the repo
 
 ```
-git clone https://github.com/Arlodotexe/ipnssync
-cd ipnssync
+git clone https://github.com/Arlodotexe/IpnsSync.git
+cd IpnsSync
 ```
 
 ### Run the script
